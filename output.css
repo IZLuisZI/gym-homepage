@@ -1008,8 +1008,8 @@ img {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-\[url\(\'\/src\/images\/desktop-quiz-darker\.webp\'\)\] {
-  background-image: url('/src/images/desktop-quiz-darker.webp');
+.bg-\[url\(\'\.\/images\/desktop-quiz-darker\.webp\'\)\] {
+  background-image: url('./images/desktop-quiz-darker.webp');
 }
 
 .bg-cover {
