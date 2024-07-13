@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  .card:hover > img,
+  .exercise-card:hover img {
+    transform: scale(1.1);
+    animation: in 0.5s forwards;
+  }
+
+  .card > img,
+  .exercise-card img {
+    transition: transform 0.5s ease-in-out;
+  }
+  .imgcon > img {
+    transition: filter 0.3s ease-in-out;
+  }
+  .imgcon:hover > img {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.8));
+  }
+  @keyframes in {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.1);
+    }
+  }
+
+  .exercise-card:hover .description-card {
+    transform: translate(0, -20%);
+  }
+
+  .description-card {
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .card:not(:hover) > img,
+  .exercise-card:not(:hover) img {
+    animation: out 0.5s forwards;
+  }
+
+  @keyframes out {
+    from {
+      transform: scale(1.1);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes out {
+    from {
+      transform: scale(1.1);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+}
