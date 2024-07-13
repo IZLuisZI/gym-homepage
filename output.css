@@ -457,6 +457,29 @@ img {
   padding: 0;
 }
 
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+#items-parent > * {
+  min-width: calc(100% / 7 - 1rem);
+}
+
+@media screen and (max-width: 1024px) {
+  #items-parent > * {
+    min-width: calc(100% / 2 - 1rem);
+  }
+}
+
 .card:hover > img,
   .exercise-card:hover img {
   transform: scale(1.1);
@@ -695,6 +718,10 @@ img {
   top: 50%;
 }
 
+.-order-1 {
+  order: -1;
+}
+
 .col-span-full {
   grid-column: 1 / -1;
 }
@@ -813,10 +840,6 @@ img {
   min-width: 100%;
 }
 
-.max-w-\[15ch\] {
-  max-width: 15ch;
-}
-
 .max-w-\[200px\] {
   max-width: 200px;
 }
@@ -831,6 +854,10 @@ img {
 
 .shrink-0 {
   flex-shrink: 0;
+}
+
+.basis-\[300px\] {
+  flex-basis: 300px;
 }
 
 .-translate-x-6 {
@@ -870,8 +897,8 @@ img {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.grid-cols-6 {
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+.grid-cols-\[repeat\(6\2c _minmax\(200px\2c _1fr\)\)\] {
+  grid-template-columns: repeat(6, minmax(200px, 1fr));
 }
 
 .flex-col {
@@ -898,10 +925,6 @@ img {
   justify-content: space-between;
 }
 
-.gap-12 {
-  gap: 3rem;
-}
-
 .gap-2 {
   gap: 0.5rem;
 }
@@ -916,6 +939,10 @@ img {
 
 .gap-6 {
   gap: 1.5rem;
+}
+
+.gap-7 {
+  gap: 1.75rem;
 }
 
 .gap-8 {
@@ -946,16 +973,16 @@ img {
   margin-bottom: calc(2.25rem * var(--tw-space-y-reverse));
 }
 
+.overflow-auto {
+  overflow: auto;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
 
 .whitespace-nowrap {
   white-space: nowrap;
-}
-
-.rounded-2xl {
-  border-radius: 1rem;
 }
 
 .rounded-full {
@@ -1108,6 +1135,11 @@ img {
 
 .text-right {
   text-align: right;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-3xl {
@@ -1463,8 +1495,16 @@ img {
 }
 
 @media (min-width: 768px) {
+  .md\:order-1 {
+    order: 1;
+  }
+
   .md\:flex {
     display: flex;
+  }
+
+  .md\:max-w-\[15ch\] {
+    max-width: 15ch;
   }
 
   .md\:grid-cols-2 {
@@ -1475,8 +1515,16 @@ img {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .md\:gap-12 {
+    gap: 3rem;
+  }
+
   .md\:gap-6 {
     gap: 1.5rem;
+  }
+
+  .md\:rounded-2xl {
+    border-radius: 1rem;
   }
 
   .md\:px-6 {
@@ -1492,6 +1540,11 @@ img {
   .md\:py-24 {
     padding-top: 6rem;
     padding-bottom: 6rem;
+  }
+
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 }
 
