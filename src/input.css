@@ -22,6 +22,15 @@
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
+  #items-parent > * {
+    min-width: calc(100% / 7 - 1rem);
+  }
+
+  @media screen and (max-width: 1024px) {
+    #items-parent > * {
+      min-width: calc(100% / 2 - 1rem);
+    }
+  }
 
   .card:hover > img,
   .exercise-card:hover img {

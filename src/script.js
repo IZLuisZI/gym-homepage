@@ -17,13 +17,14 @@ function updateButtonState() {
 function next() {
   const length = itemsParent.childElementCount;
   const translateX = -(itemWidth + gap) * index;
-  if (index >= length) {
+  if (index >= length - 6) {
     rightNav.disabled = true;
     return;
   }
   carousel.style.transform = `translateX(${translateX}px)`;
   index++;
   updateButtonState(); // Update the state of the buttons
+  console.log(index, length);
 }
 
 function prev() {
